@@ -1,0 +1,62 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Bump"
+run/main_scene="res://Walls.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+view_port="*res://view_port.gd"
+
+[display]
+
+window/size/width=1440
+window/size/height=2960
+window/size/test_width=480
+window/size/test_height=986
+window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/handheld/emulate_touchscreen=true
+
+[layer_names]
+
+2d_render/layer_1="ball"
+2d_physics/layer_1="ball"
+2d_render/layer_2="top_wall"
+2d_physics/layer_2="top_wall"
+2d_render/layer_3="right_wall"
+2d_physics/layer_3="right_wall"
+2d_render/layer_4="left_wall"
+2d_physics/layer_4="left_wall"
+2d_render/layer_5="bottom_wall"
+2d_physics/layer_5="bottom_wall"
+2d_render/layer_6="xlarge_wall"
+2d_physics/layer_6="xlarge_wall"
+2d_render/layer_7="large_wall"
+2d_physics/layer_7="large_wall"
+2d_render/layer_8="medium_wall"
+2d_physics/layer_8="medium_wall"
+2d_render/layer_9="small_wall"
+2d_physics/layer_9="small_wall"
+2d_render/layer_10="xsmall_wall"
+2d_physics/layer_10="xsmall_wall"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+environment/default_environment="res://default_env.tres"
