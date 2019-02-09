@@ -21,3 +21,4 @@ func window_resize():
 		new_size = Vector2(minimum_size.x, new_size.y*scale_factor)
 
 	viewport.set_size_override(true, new_size)
+#Test
