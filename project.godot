@@ -17,11 +17,7 @@ _global_script_class_icons={
 
 config/name="Bump"
 run/main_scene="res://Walls.tscn"
-config/icon="res://icon.png"
-
-[autoload]
-
-view_port="*res://view_port.gd"
+config/icon="res://greenBalls.png"
 
 [display]
 

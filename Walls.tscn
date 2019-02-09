@@ -7,17 +7,14 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-custom_solver_bias = 0.0
 extents = Vector2( 720, 1 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
-custom_solver_bias = 0.0
 extents = Vector2( 1, 1332 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
-custom_solver_bias = 0.0
 extents = Vector2( 1, 1332 )
 
 [node name="Walls" type="Node2D"]
@@ -40,11 +37,8 @@ __meta__ = {
 
 [node name="xlarge_wall" type="StaticBody2D" parent="balls_walls"]
 editor/display_folded = true
-input_pickable = false
 collision_layer = 32
 collision_mask = 0
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -56,11 +50,8 @@ shape = SubResource( 1 )
 [node name="large_wall" type="StaticBody2D" parent="balls_walls"]
 editor/display_folded = true
 position = Vector2( 0, 333.796 )
-input_pickable = false
 collision_layer = 64
 collision_mask = 0
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -72,11 +63,8 @@ shape = SubResource( 1 )
 [node name="medium_wall" type="StaticBody2D" parent="balls_walls"]
 editor/display_folded = true
 position = Vector2( 0, 666.85 )
-input_pickable = false
 collision_layer = 128
 collision_mask = 0
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -88,11 +76,8 @@ shape = SubResource( 1 )
 [node name="small_wall" type="StaticBody2D" parent="balls_walls"]
 editor/display_folded = true
 position = Vector2( 0, 999.565 )
-input_pickable = false
 collision_layer = 256
 collision_mask = 0
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -103,11 +88,8 @@ shape = SubResource( 1 )
 
 [node name="right_wall" type="StaticBody2D" parent="."]
 editor/display_folded = true
-input_pickable = false
 collision_layer = 4
 collision_mask = 0
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -118,11 +100,8 @@ shape = SubResource( 2 )
 
 [node name="left_wall" type="StaticBody2D" parent="."]
 editor/display_folded = true
-input_pickable = false
 collision_layer = 8
 collision_mask = 0
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -134,11 +113,8 @@ shape = SubResource( 3 )
 [node name="bottom_wall" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( 0, 2240 )
-input_pickable = false
 collision_layer = 16
 collision_mask = 0
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
 __meta__ = {
 "_edit_lock_": true
 }
