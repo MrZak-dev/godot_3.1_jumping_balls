@@ -1,3 +1,3 @@
 # Godot 3.1 smooth gravity jumping
 
-## Testing
+## Testing Godot 3.1 beta
