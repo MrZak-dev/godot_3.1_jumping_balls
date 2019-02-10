@@ -19,6 +19,10 @@ config/name="Bump"
 run/main_scene="res://scenes/Walls.tscn"
 config/icon="res://assets/images/greenBalls.png"
 
+[autoload]
+
+viewport_change="*res://scripts/viewport_change.gd"
+
 [display]
 
 window/size/width=1440
@@ -26,7 +30,8 @@ window/size/height=2960
 window/size/test_width=480
 window/size/test_height=986
 window/handheld/orientation="portrait"
-window/stretch/mode="2d"
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 window/handheld/emulate_touchscreen=true
 
 [layer_names]
