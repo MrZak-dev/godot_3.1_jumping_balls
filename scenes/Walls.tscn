@@ -1,0 +1,142 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/images/bg.jpg" type="Texture" id=1]
+[ext_resource path="res://scenes/mediumBall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/smallBall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/largeBall.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+extents = Vector2( 720, 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+extents = Vector2( 1, 1332 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+extents = Vector2( 1, 1332 )
+
+[node name="Walls" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 333.796, 666.85, 999.565, 1332.9, 2240.0 ]
+}
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 704, 976 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="balls_walls" type="Node2D" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="xlarge_wall" type="StaticBody2D" parent="balls_walls"]
+editor/display_folded = true
+collision_layer = 32
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="balls_walls/xlarge_wall"]
+position = Vector2( 720, 0 )
+shape = SubResource( 1 )
+
+[node name="large_wall" type="StaticBody2D" parent="balls_walls"]
+editor/display_folded = true
+position = Vector2( 0, 333.796 )
+collision_layer = 64
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="balls_walls/large_wall"]
+position = Vector2( 720, 0 )
+shape = SubResource( 1 )
+
+[node name="medium_wall" type="StaticBody2D" parent="balls_walls"]
+editor/display_folded = true
+position = Vector2( 0, 666.85 )
+collision_layer = 128
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="balls_walls/medium_wall"]
+position = Vector2( 720, 0 )
+shape = SubResource( 1 )
+
+[node name="small_wall" type="StaticBody2D" parent="balls_walls"]
+editor/display_folded = true
+position = Vector2( 0, 999.565 )
+collision_layer = 256
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="balls_walls/small_wall"]
+position = Vector2( 720, 0 )
+shape = SubResource( 1 )
+
+[node name="right_wall" type="StaticBody2D" parent="."]
+editor/display_folded = true
+collision_layer = 4
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
+position = Vector2( 1436.92, 906.85 )
+shape = SubResource( 2 )
+
+[node name="left_wall" type="StaticBody2D" parent="."]
+editor/display_folded = true
+collision_layer = 8
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
+position = Vector2( 0, 906.85 )
+shape = SubResource( 3 )
+
+[node name="bottom_wall" type="StaticBody2D" parent="."]
+position = Vector2( 0, 2240 )
+collision_layer = 16
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom_wall"]
+position = Vector2( 720, 0 )
+shape = SubResource( 1 )
+
+[node name="Balls" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Ball3" parent="Balls" instance=ExtResource( 2 )]
+position = Vector2( 736, 1600 )
+
+[node name="Ball4" parent="Balls" instance=ExtResource( 3 )]
+position = Vector2( 1024, 1753.9 )
+
+[node name="Ball" parent="Balls" instance=ExtResource( 4 )]
+position = Vector2( 288, 1248 )
+
+[node name="Ball2" parent="Balls" instance=ExtResource( 2 )]
+position = Vector2( 1216, 2000 )
+
+[node name="Ball5" parent="Balls" instance=ExtResource( 3 )]
+position = Vector2( 400, 1920 )
+

@@ -16,8 +16,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Bump"
-run/main_scene="res://Walls.tscn"
-config/icon="res://greenBalls.png"
+run/main_scene="res://scenes/Walls.tscn"
+config/icon="res://assets/images/greenBalls.png"
 
 [display]
 
