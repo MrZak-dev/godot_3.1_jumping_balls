@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/images/bg.jpg" type="Texture" id=1]
 [ext_resource path="res://scenes/mediumBall.tscn" type="PackedScene" id=2]
@@ -8,6 +8,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 extents = Vector2( 720, 1 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+extents = Vector2( 1, 1332 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -89,9 +93,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="right_wall"]
-position = Vector2( 1465.79, -53.0377 )
-polygon = PoolVector2Array( 54.1504, -21.4248, -43.3197, -24.1323, -46.3435, 2305.73, 112.994, 2305.73 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
+position = Vector2( 1438.53, 1326.18 )
+shape = SubResource( 4 )
 
 [node name="left_wall" type="StaticBody2D" parent="."]
 collision_layer = 8
@@ -101,7 +105,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
-position = Vector2( 0, 906.85 )
+position = Vector2( 0, 1322.3 )
 shape = SubResource( 3 )
 
 [node name="bottom_wall" type="StaticBody2D" parent="."]
