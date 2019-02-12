@@ -26,7 +26,3 @@ collision_mask = 64
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -33.6459, -129.687, 29.7122, -123.153, 76.3651, -103.714, 119.752, -46.0458, 128.872, 23.9219, 99.9654, 87.5754, 55.5872, 129.501, -50.2311, 113.475, -106.175, 48.7094, -129.096, -61.8858, -92.0638, -112.579 )
-disabled = true
-

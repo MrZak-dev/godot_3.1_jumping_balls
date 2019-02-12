@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Ball.gd" type="Script" id=1]
-[ext_resource path="res://assets/images/rock.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/blueBalls.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -12,7 +12,7 @@ collision_mask = 156
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.16, 0.16 )
+scale = Vector2( 0.09, 0.09 )
 texture = ExtResource( 2 )
 
 [node name="topRC" type="RayCast2D" parent="."]
@@ -24,10 +24,5 @@ cast_to = Vector2( 0, 250 )
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 1 )
-disabled = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -41.7594, -159.303, 36.9778, -151.415, 94.5155, -127.493, 147.479, -56.8633, 158.705, 29.3819, 122.927, 108.199, 68.3783, 159.322, -62.3281, 139.031, -130.053, 61.0287, -158.845, -76.7969, -114.833, -138.415 )
 
