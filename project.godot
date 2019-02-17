@@ -19,10 +19,6 @@ config/name="Bump"
 run/main_scene="res://scenes/Walls.tscn"
 config/icon="res://assets/images/greenBalls.png"
 
-[autoload]
-
-viewport_change="*res://scripts/viewport_change.gd"
-
 [display]
 
 window/size/width=1440

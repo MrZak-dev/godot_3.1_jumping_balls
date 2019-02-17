@@ -126,29 +126,29 @@ shape = SubResource( 1 )
 [node name="Rocks" type="Node2D" parent="."]
 
 [node name="rock_blue" parent="Rocks" instance=ExtResource( 2 )]
-position = Vector2( 330.065, 814.63 )
+position = Vector2( 971.278, 814.63 )
 
 [node name="rock_blue2" parent="Rocks" instance=ExtResource( 2 )]
-position = Vector2( 330.065, 814.63 )
+position = Vector2( 374.896, 1172.46 )
 
 [node name="rock_green" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 280.907, 1158.74 )
+position = Vector2( 813.877, 1745.13 )
 
 [node name="rock_green2" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 280.907, 1158.74 )
+position = Vector2( 343.18, 1843.37 )
 
 [node name="rock_green3" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 280.907, 1158.74 )
+position = Vector2( 542.981, 1627.15 )
 
 [node name="rock_green4" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 280.907, 1158.74 )
+position = Vector2( 1244.49, 1746.26 )
 
 [node name="rock_green5" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 280.907, 1158.74 )
+position = Vector2( 609.923, 1966.72 )
 
 [node name="rock_red" parent="Rocks" instance=ExtResource( 4 )]
-position = Vector2( 744.403, 554.791 )
+position = Vector2( 1092.18, 1902.43 )
 
 [node name="rock_red2" parent="Rocks" instance=ExtResource( 4 )]
-position = Vector2( 744.403, 554.791 )
+position = Vector2( 650.851, 638.063 )
 
