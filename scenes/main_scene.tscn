@@ -14,7 +14,7 @@ extents = Vector2( 1, 1332 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 1, 1332 )
 
-[node name="Walls" type="Node2D"]
+[node name="main_scene" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 333.796, 666.85, 999.565, 1332.9, 2240.0 ]
 }
@@ -31,18 +31,6 @@ editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="xlarge_wall" type="StaticBody2D" parent="balls_walls"]
-editor/display_folded = true
-collision_layer = 32
-collision_mask = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="balls_walls/xlarge_wall"]
-position = Vector2( 720, 0 )
-shape = SubResource( 1 )
 
 [node name="large_wall" type="StaticBody2D" parent="balls_walls"]
 editor/display_folded = true
@@ -121,31 +109,14 @@ position = Vector2( 720, 0 )
 shape = SubResource( 1 )
 
 [node name="Rocks" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="rock_blue" parent="Rocks" instance=ExtResource( 2 )]
 position = Vector2( 971.278, 814.63 )
 
-[node name="rock_blue2" parent="Rocks" instance=ExtResource( 2 )]
-position = Vector2( 374.896, 1172.46 )
-
 [node name="rock_green" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 813.877, 1745.13 )
-
-[node name="rock_green2" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 343.18, 1843.37 )
-
-[node name="rock_green3" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 542.981, 1627.15 )
-
-[node name="rock_green4" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 1244.49, 1746.26 )
-
-[node name="rock_green5" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 609.923, 1966.72 )
+position = Vector2( 586.736, 1017.25 )
 
 [node name="rock_red" parent="Rocks" instance=ExtResource( 4 )]
-position = Vector2( 1092.18, 1902.43 )
-
-[node name="rock_red2" parent="Rocks" instance=ExtResource( 4 )]
-position = Vector2( 650.851, 638.063 )
+position = Vector2( 219.752, 782.211 )
 
