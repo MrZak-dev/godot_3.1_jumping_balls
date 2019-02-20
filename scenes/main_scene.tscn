@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/images/bg.jpg" type="Texture" id=1]
 [ext_resource path="res://scenes/Rocks/rock_green.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/pixel_art_assets/pixel_rock/pixel_rock.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 720, 1 )
@@ -109,5 +110,8 @@ shape = SubResource( 1 )
 [node name="Rocks" type="Node2D" parent="."]
 
 [node name="rock_green" parent="Rocks" instance=ExtResource( 2 )]
-position = Vector2( 1710.5, 1724.95 )
+position = Vector2( 528.596, 1518.25 )
+
+[node name="rock_green2" parent="Rocks" instance=ExtResource( 3 )]
+position = Vector2( 980.593, 1140.78 )
 

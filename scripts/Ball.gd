@@ -27,7 +27,7 @@ func _ready():
 	texture_dimensions = (sprite.texture.get_width() * sprite.get_scale()) # real width
 
 func _physics_process(delta):
-	ball_position = self.get_position() #position of the ball
+	"""ball_position = self.get_position() #position of the ball
 	if (ball_position.x + texture_dimensions.x ) <  0 : #if outside from the left
 		ov_direction = 1
 		move_and_collide(ov_velocity * ov_direction * delta)
@@ -36,14 +36,14 @@ func _physics_process(delta):
 		ov_direction = -1
 		move_and_collide(ov_velocity * ov_direction * delta)
 		print("right")
-	if ((ball_position.x > 0) and (ball_position.x   < game_width -50)) :
-		ov_velocity = Vector2(0,0)
-		print("im in")
-		var collision_info = move_and_collide(velocity * delta)
-		if collision_info:
-			velocity = velocity.bounce(collision_info.normal)
-		if raycast.is_colliding():
-			velocity.y = min(velocity.y + GRAVITY , 1100)
-		sprite.rotation_degrees += ROTATION * delta ##ball rotation
-	print(ball_position.x)
-	print(game_width)
+	if ((ball_position.x > 0) and (ball_position.x   < game_width)) :"""
+		#ov_velocity = Vector2(0,0)
+		#print("im in")
+	var collision_info = move_and_collide(velocity * delta)
+	if collision_info:
+		velocity = velocity.bounce(collision_info.normal)
+	if raycast.is_colliding():
+		velocity.y = min(velocity.y + GRAVITY , 1100)
+	sprite.rotation_degrees += ROTATION * delta ##ball rotation
+#print(ball_position.x)
+#print(game_width)

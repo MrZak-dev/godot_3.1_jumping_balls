@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/Ball.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/pixel_rock.png" type="Texture" id=2]
+
+[node name="rock_green" type="KinematicBody2D"]
+collision_mask = 284
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+
+[node name="topRC" type="RayCast2D" parent="."]
+position = Vector2( -1.2605, -160.097 )
+rotation = 3.14159
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 0, 250 )
+collision_mask = 256
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -76.0869, -158.839, 124.928, -152.205, 166.06, -4.92651, 142.177, 122.449, 75.1719, 152.966, 28.7328, 162.918, -79.4039, 153.63, -123.853, 143.679, -134.467, 135.054, -161.004, -1.60944, -150.389, -92.4974, -134.467, -117.707, -116.555, -138.273, -96.6528, -147.561 )
+
