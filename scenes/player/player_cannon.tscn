@@ -1,16 +1,18 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scenes/player/cannon.png" type="Texture" id=1]
+[ext_resource path="res://scenes/player/player_cannon.gd" type="Script" id=1]
+[ext_resource path="res://scenes/player/cannon.png" type="Texture" id=2]
 
 [node name="player_cannon" type="KinematicBody2D"]
-position = Vector2( 710, 2560 )
+position = Vector2( 700, 2160 )
 scale = Vector2( 7, 7 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
