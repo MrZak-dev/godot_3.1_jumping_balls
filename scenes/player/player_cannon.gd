@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 var motion = Vector2()
-var moving_speed = 230
-var max_speed = 400 
+var moving_speed = 500
+var max_speed = 10
 var touch_point = Vector2()
 var pressed = false
 var player_position = Vector2()
@@ -13,23 +13,24 @@ var drag_index
 
 func _process(delta):
 	if pressed:
-		player_position.x = int(self.get_position().x)
-		if player_position.x > touch_point.x:
-			motion.x = min(motion.x - moving_speed,-max_speed)
-		if player_position.x < touch_point.x:
-			motion.x = max(motion.x + moving_speed,max_speed)
-		move_and_slide(motion)
-		pressed = false #in the end of each frame make it false so the movements wont keep going
+		if max_speed > 20:
+			player_position.x = int(self.get_position().x)
+			if player_position.x > touch_point.x:
+				motion.x = min(motion.x - moving_speed,max_speed)
+			if player_position.x < touch_point.x:
+				motion.x = max(motion.x + moving_speed,max_speed)
+			move_and_slide(motion)
+			pressed = false #in the end of each frame make it false so the movements wont keep going
 	else:
 		move_and_slide(Vector2(0,0))
 	pass  
 func _input(event):
-	if event is InputEventScreenDrag or InputEventScreenTouch:
-		if event is InputEventScreenDrag: #fonctions that works only for drag event
-			max_speed = event.get_speed().x
-			drag_index = event.get_index()
-			pass
+	if event is InputEventScreenDrag:
+		#if event is InputEventScreenDrag: #fonctions that works only for drag event
+		max_speed = event.get_speed().x
+		drag_index = event.get_index()
 		pressed = true #if an input event received start moving the canon
 		touch_point.x = int(event.get_position().x)
+		print ("Drag Position : " + str(event.get_position().x) + "Drag Speed  : " + str(event.get_speed().x) + " Index : " + str(event.get_index()))
 #TODO : figure out the shaking physics where it is coming from 
 #Notice : this scene is working only on android devices
