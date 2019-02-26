@@ -16,6 +16,4 @@ func _physics_process(delta):
 func _input(event):
 	if event is InputEventScreenDrag or InputEventScreenTouch:
 		position_of_touch.x = event.get_position().x
-	
-	
 	pass
