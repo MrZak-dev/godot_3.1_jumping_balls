@@ -1,15 +1,28 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/player/tween_player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player/cannon.png" type="Texture" id=2]
+[ext_resource path="res://scenes/player/cannon2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "fire",
+"speed": 30.0
+} ]
 
 [node name="tween_player" type="Node2D"]
 position = Vector2( 700, 2480 )
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 7, 7 )
-texture = ExtResource( 2 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 5, 5 )
+frames = SubResource( 1 )
+animation = "fire"
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -3.56738, -165.708 )
 
