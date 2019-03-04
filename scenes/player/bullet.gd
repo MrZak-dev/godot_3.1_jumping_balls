@@ -14,3 +14,9 @@ func _physics_process(delta):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+
+
+func _on_bullet_body_entered(body):
+	#play hit animation and wait for it to finish then free
+	queue_free()
+	pass # Replace with function body.
