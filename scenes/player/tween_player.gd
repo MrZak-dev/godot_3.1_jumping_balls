@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var tween_node = get_node("Tween")
-const BULLET = preload("res://scenes/player/bullet.tscn")
+const BULLET = preload("res://scenes/player/bullet/bullet.tscn")
 
 var is_player_pressing = false
 func _ready():
