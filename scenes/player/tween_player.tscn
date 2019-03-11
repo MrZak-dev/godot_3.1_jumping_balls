@@ -9,7 +9,7 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "fire",
-"speed": 4.0
+"speed": 8.0
 } ]
 
 [node name="tween_player" type="Node2D"]
@@ -27,7 +27,7 @@ animation = "fire"
 position = Vector2( -3.56738, -165.708 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.25
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
