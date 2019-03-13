@@ -2,3 +2,5 @@
 
 [node name="bullet_hit" type="Node2D"]
 
+[node name="rock_piece" type="Sprite" parent="."]
+
