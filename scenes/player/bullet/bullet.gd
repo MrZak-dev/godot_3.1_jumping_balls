@@ -1,13 +1,13 @@
 extends Area2D
 
 
-const SPEED = -2000
+var speed : int = -2000
 var velocity = Vector2()
 func _ready():
 	pass
 
 func _physics_process(delta):
-	velocity.y = SPEED * delta
+	velocity.y = speed * delta
 	translate(velocity)
 	pass
 
@@ -17,6 +17,8 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_bullet_body_entered(body):
-	#play hit animation and wait for it to finish then free
+	speed = -300
+	$AnimatedSprite.play("explosion")
+
+func _on_AnimatedSprite_animation_finished():
 	queue_free()
-	pass # Replace with function body.
