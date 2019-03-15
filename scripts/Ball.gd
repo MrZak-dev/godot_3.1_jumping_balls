@@ -8,7 +8,11 @@ var sprite
 var raycast
 var velocity = Vector2(300, 1100) #300,1100
 
+#rock gameplay variables
+var rock_score : int
+
 func _ready():
+	rock_score = randi() % 20 + 1 
 	raycast = $topRC
 	sprite  = $Sprite
 	velocity.x *= directions[randi() % 2 ]  # direction could be 1 or -1 for reverse
@@ -16,9 +20,13 @@ func _ready():
 
 
 func _physics_process(delta):
+	$Label.set_text(str(rock_score)) #update rock score
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info:
 		velocity = velocity.bounce(collision_info.normal)
 	if raycast.is_colliding():
 		velocity.y = min(velocity.y + GRAVITY , 1100)
 	sprite.rotation_degrees += ROTATION * delta ##ball rotation
+	$Label.rect_rotation += ROTATION * delta
+	if rock_score == 0 :
+		queue_free() # TODO : play explosion animation then free
