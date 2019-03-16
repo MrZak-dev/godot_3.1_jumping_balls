@@ -12,6 +12,7 @@ var velocity = Vector2(300, 1100) #300,1100
 var rock_score : int
 
 func _ready():
+	randomize()
 	rock_score = randi() % 20 + 1 
 	raycast = $topRC
 	sprite  = $Sprite

@@ -19,6 +19,10 @@ config/name="Bump"
 run/main_scene="res://scenes/main_scene.tscn"
 config/icon="res://assets/images/greenBalls.png"
 
+[autoload]
+
+global_variables="*res://scripts/global_variables.gd"
+
 [display]
 
 window/size/width=1440
