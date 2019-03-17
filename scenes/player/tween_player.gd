@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 onready var tween_node = get_node("Tween")
 const BULLET = preload("res://scenes/player/bullet/bullet.tscn")
@@ -30,3 +30,8 @@ func _on_Timer_timeout():
 		get_parent().add_child(one_bullet)
 		#play fire animation
 		$AnimatedSprite.play("fire")
+
+
+func _on_tween_player_body_entered(body):
+	print("game over")
+	pass # Replace with function body.
