@@ -20,6 +20,8 @@ func _on_bullet_body_entered(body):
 	speed = -300
 	$AnimatedSprite.play("explosion")
 	body.rock_score -= 1
+	var body_sprite : Node  = body.get_child(0)
+	body_sprite.play("hit_taking")
 
 func _on_AnimatedSprite_animation_finished():
 	queue_free()

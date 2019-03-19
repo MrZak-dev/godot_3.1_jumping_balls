@@ -13,9 +13,9 @@ var rock_score : int
 
 func _ready():
 	randomize()
-	rock_score = randi() % 20 + 1 
+	rock_score = randi() % 100 + 1 
 	raycast = $topRC
-	sprite  = $Sprite
+	sprite  = $AnimatedSprite
 	velocity.x *= directions[randi() % 2 ]  # direction could be 1 or -1 for reverse
 	ROTATION *= directions[randi() % 2 ]
 
@@ -31,3 +31,7 @@ func _physics_process(delta):
 	$Label.rect_rotation += ROTATION * delta
 	if rock_score == 0 :
 		queue_free() # TODO : play explosion animation then free
+
+func _on_AnimatedSprite_animation_finished(): ##signal
+	$AnimatedSprite.stop()
+	pass # Replace with function body.

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/player/tween_player.gd" type="Script" id=1]
-[ext_resource path="res://scenes/player/cannon.png" type="Texture" id=2]
-[ext_resource path="res://scenes/player/cannon2.png" type="Texture" id=3]
+[ext_resource path="res://scenes/player/cannon/tween_player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/player/cannon/cannon.png" type="Texture" id=2]
+[ext_resource path="res://scenes/player/cannon/cannon2.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
