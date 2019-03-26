@@ -6,7 +6,8 @@ var ROTATION = 30
 var directions = [1 , -1]
 var sprite
 var raycast
-var velocity = Vector2(300, 1100) #300,1100
+var velocity = Vector2(300, 1100) #300,1100 
+
 
 #rock gameplay variables
 var rock_score : int

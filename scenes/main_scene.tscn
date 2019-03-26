@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/images/bg.png" type="Texture" id=1]
-[ext_resource path="res://scenes/pixel_rocks/medium_rock.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/player/cannon/tween_player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/main_scene.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/bg.png" type="Texture" id=2]
+[ext_resource path="res://scenes/pixel_rocks/medium_rock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/player/cannon/tween_player.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 720, 1 )
@@ -14,6 +15,7 @@ extents = Vector2( 1, 1332 )
 extents = Vector2( 1, 1332 )
 
 [node name="main_scene" type="Node2D"]
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 333.796, 666.85, 999.565, 1332.9, 2240.0 ]
 }
@@ -21,51 +23,40 @@ __meta__ = {
 [node name="bg" type="Sprite" parent="."]
 position = Vector2( 1201.16, 1488.9 )
 scale = Vector2( 1.55924, 3.24584 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="balls_walls" type="Node2D" parent="."]
-editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="large_wall" type="StaticBody2D" parent="balls_walls"]
-editor/display_folded = true
+[node name="large_wall" type="Area2D" parent="balls_walls"]
 position = Vector2( 0, 333.796 )
 collision_layer = 64
 collision_mask = 0
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="balls_walls/large_wall"]
 position = Vector2( 720, 0 )
 shape = SubResource( 1 )
 
-[node name="medium_wall" type="StaticBody2D" parent="balls_walls"]
+[node name="medium_wall" type="Area2D" parent="balls_walls"]
 editor/display_folded = true
 position = Vector2( 0, 666.85 )
 collision_layer = 128
 collision_mask = 0
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="balls_walls/medium_wall"]
 position = Vector2( 720, 0 )
 shape = SubResource( 1 )
 
-[node name="small_wall" type="StaticBody2D" parent="balls_walls"]
+[node name="small_wall" type="Area2D" parent="balls_walls"]
 editor/display_folded = true
 position = Vector2( 0, 999.565 )
 collision_layer = 256
 collision_mask = 0
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="balls_walls/small_wall"]
 position = Vector2( 720, 0 )
@@ -101,23 +92,25 @@ editor/display_folded = true
 position = Vector2( 0, 2240 )
 collision_layer = 16
 collision_mask = 0
-__meta__ = {
-"_edit_lock_": true
-}
+
+[node name="Area2D" type="Area2D" parent="bottom_wall"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bottom_wall/Area2D"]
+position = Vector2( 720, 0 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bottom_wall"]
 position = Vector2( 720, 0 )
 shape = SubResource( 1 )
 
 [node name="Rocks" type="Node2D" parent="."]
-editor/display_folded = true
 
-[node name="rock_green2" parent="Rocks" instance=ExtResource( 2 )]
-position = Vector2( 980.593, 1140.78 )
+[node name="rock_green2" parent="Rocks" instance=ExtResource( 3 )]
+position = Vector2( 906.875, 272.549 )
 
-[node name="rock_green3" parent="Rocks" instance=ExtResource( 2 )]
+[node name="rock_green3" parent="Rocks" instance=ExtResource( 3 )]
 position = Vector2( 411.76, 1323.37 )
 
-[node name="tween_player" parent="." instance=ExtResource( 3 )]
+[node name="tween_player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 721.525, 2200.18 )
 
