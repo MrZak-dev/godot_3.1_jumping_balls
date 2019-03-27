@@ -34,6 +34,7 @@ __meta__ = {
 }
 
 [node name="large_wall" type="Area2D" parent="balls_walls"]
+editor/display_folded = true
 position = Vector2( 0, 333.796 )
 collision_layer = 64
 collision_mask = 0
