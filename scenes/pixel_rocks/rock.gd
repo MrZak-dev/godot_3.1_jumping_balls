@@ -6,7 +6,7 @@ var ROTATION = 30
 var directions = [1 , -1]
 var sprite
 var raycast
-var velocity = Vector2(0, 2000) #300,1100 
+var velocity = Vector2(300, 1100) #300,1100 
 
 
 #rock gameplay variables
@@ -24,8 +24,8 @@ func _physics_process(delta):
 	$Label.set_text(str(rock_score)) #update rock score
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info:
-		if collision_info.get_collider_id() == 1198: # this is for the ground area2d collision
-			velocity = Vector2(300,1100)
+		#if collision_info.get_collider_id() == 1198: # this is for the ground area2d collision
+		#	velocity = Vector2(300,1100)
 		velocity = velocity.bounce(collision_info.normal)
 	if raycast.is_colliding():
 		velocity.y = min(velocity.y + GRAVITY , 1100)
