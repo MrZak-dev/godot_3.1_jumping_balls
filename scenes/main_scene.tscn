@@ -107,10 +107,10 @@ shape = SubResource( 1 )
 [node name="Rocks" type="Node2D" parent="."]
 
 [node name="rock_green2" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 906.875, 272.549 )
+position = Vector2( 1103.28, 1752.88 )
 
 [node name="rock_green3" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 411.76, 1323.37 )
+position = Vector2( 665.86, 1855.12 )
 
 [node name="tween_player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 721.525, 2200.18 )
