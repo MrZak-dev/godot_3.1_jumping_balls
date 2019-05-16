@@ -20,3 +20,17 @@ shape = SubResource( 1 )
 disabled = true
 
 [node name="tween" type="Tween" parent="."]
+
+[node name="center_drop_position" type="Position2D" parent="."]
+position = Vector2( 0, 200 )
+
+[node name="right_drop_position" type="Position2D" parent="."]
+position = Vector2( 470, 100 )
+
+[node name="left_drop_position" type="Position2D" parent="."]
+position = Vector2( -480, 100 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
