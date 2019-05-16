@@ -56,5 +56,4 @@ custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.171875, 0.0167101, 0, 1 )
 text = "644"
 align = 1
-
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

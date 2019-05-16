@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/player/cannon/tween_player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/player/cannon/player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player/cannon/cannon.png" type="Texture" id=2]
 [ext_resource path="res://scenes/player/cannon/cannon2.png" type="Texture" id=3]
 
@@ -33,6 +33,5 @@ autostart = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PoolVector2Array( -70.3416, -145.805, 65.8966, -146.031, 65.6707, -112.819, 52.5665, -110.107, 52.5599, -56.9075, 57.0881, -56.9075, 56.7107, -47.8511, 63.5031, -45.5869, 66.8992, -38.4175, 67.2766, -24.4553, 62.7484, -25.21, 62.371, 21.9587, 68.4086, 25.355, 68.4086, 31.3926, 77.465, 34.7888, 83.88, 41.5811, 81.9933, 53.2788, 74.4462, 57.8071, 69.5449, 101.886, -72.0284, 101.886, -81.2145, 59.1982, -88.7795, 44.0684, -85.5374, 34.342, -76.3513, 30.5596, -73.1091, 28.3979, -71.488, 19.2119, -67.7056, -23.4761, -74.7302, -37.5254, -68.7863, -44.0098, -63.3828, -54.8169, -59.6002, -74.8101, -59.6002, -95.3435, -53.6563, -103.449, -54.1967, -114.256, -61.7928, -113.735, -64.0576, -118.588, -68.587, -122.47, -72.1459, -126.353 )
-
 [connection signal="body_entered" from="." to="." method="_on_tween_player_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/main_scene.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/bg.png" type="Texture" id=2]
 [ext_resource path="res://scenes/pixel_rocks/medium_rock.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/player/cannon/tween_player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/player/cannon/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/spaceship/spaceship.tscn" type="PackedScene" id=5]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 720, 1 )
@@ -29,6 +31,7 @@ __meta__ = {
 }
 
 [node name="balls_walls" type="Node2D" parent="."]
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -107,11 +110,12 @@ shape = SubResource( 1 )
 [node name="Rocks" type="Node2D" parent="."]
 
 [node name="rock_green2" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 1103.28, 1752.88 )
+position = Vector2( 710.945, 541.545 )
 
 [node name="rock_green3" parent="Rocks" instance=ExtResource( 3 )]
-position = Vector2( 665.86, 1855.12 )
+position = Vector2( 709.998, 550.605 )
 
 [node name="tween_player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 721.525, 2200.18 )
 
+[node name="KinematicBody2D" parent="." instance=ExtResource( 5 )]
