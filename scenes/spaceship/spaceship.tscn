@@ -9,6 +9,9 @@ extents = Vector2( 187.855, 55.5015 )
 [node name="spaceship" type="Area2D"]
 position = Vector2( 730, 300 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="image" type="Sprite" parent="."]
 scale = Vector2( 1.8, 1.8 )
@@ -33,4 +36,7 @@ position = Vector2( -480, 100 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="viewport_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_viewport_exited"]

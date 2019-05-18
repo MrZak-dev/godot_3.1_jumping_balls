@@ -14,7 +14,9 @@ extents = Vector2( 1, 1332 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 1, 1332 )
 
-[node name="main_scene" type="Node2D"]
+[node name="main_scene" type="Node2D" groups=[
+"main_scene_group",
+]]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 333.796, 666.85, 999.565, 1332.9, 2240.0 ]
@@ -108,4 +110,4 @@ shape = SubResource( 1 )
 [node name="tween_player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 721.525, 2200.18 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
+[node name="spaceship" parent="." instance=ExtResource( 4 )]

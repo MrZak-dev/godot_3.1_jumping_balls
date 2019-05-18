@@ -29,7 +29,12 @@ func _ready():
 
 func _on_Timer_timeout():
 	center_rock.position = center_drop_position.global_position #set the rock position to the position2d node
-	get_parent().add_child(center_rock,true)# add the rock to parent node (spaceship) 
+	get_parent().add_child(center_rock)# add the rock to parent node (spaceship) 
 	tween.interpolate_property(self,"position:x",get_position().x,spaceship_leaving_position.x,3,Tween.TRANS_BACK,Tween.EASE_IN_OUT)
 	tween.start()
 
+
+
+
+func _on_VisibilityNotifier2D_viewport_exited(viewport):
+	queue_free()

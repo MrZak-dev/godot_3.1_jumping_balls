@@ -14,7 +14,9 @@ var rock_score : int
 
 func _ready():
 	randomize()
-	rock_score = randi() % 100 + 1 
+	rock_score = randi() % 20 + 1 
+	global_variables.global_rocks_value += rock_score # global rock value increased each time a rock is generated
+	global_variables.current_rocks_value += rock_score # rock value currently in scene 
 	raycast = $topRC
 	sprite  = $AnimatedSprite
 	velocity.x *= directions[randi() % 2 ]  # direction could be 1 or -1 for reverse
