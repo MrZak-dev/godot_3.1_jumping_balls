@@ -13,8 +13,9 @@ var velocity = Vector2(300, 1100) #300,1100
 var rock_score : int
 
 func _ready():
+	global_variables.number_of_rocks_in_scene += 1 #each time a rock is created increase number of rocks in scene by 1
 	randomize()
-	rock_score = randi() % 20 + 1 
+	rock_score = randi() % 50 + 1 
 	global_variables.global_rocks_value += rock_score # global rock value increased each time a rock is generated
 	global_variables.current_rocks_value += rock_score # rock value currently in scene 
 	raycast = $topRC
@@ -33,7 +34,8 @@ func _physics_process(delta):
 		velocity.y = min(velocity.y + GRAVITY , 1100)
 	sprite.rotation_degrees += ROTATION * delta ##ball rotation
 	$Label.rect_rotation += ROTATION * delta
-	if rock_score == 0 :
+	if rock_score <= 0 :
+		global_variables.number_of_rocks_in_scene -= 1 #each time a rock is destroyed decrease number of rocks by 1
 		queue_free() # TODO : play explosion animation then free
 
 func _on_AnimatedSprite_animation_finished(): ##signal

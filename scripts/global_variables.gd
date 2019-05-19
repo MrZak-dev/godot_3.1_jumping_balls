@@ -3,12 +3,12 @@ extends Node
 #game variables
 var global_rocks_value : int = 0 # contains rocks value in general from the level beginning
 var current_rocks_value : int = 0 #contains number of rocks value currently in scene
-#ball variables
-var ball_falling_speed : int
+
+var total_number_of_rocks = 3 # total number of rock that the player should interract with each level 
+var number_of_rocks_in_scene = 0# number of rocks that the player is currently interracting with
+
+#rock scene global variables
+var rock_fall_speed : int = 0#global ball falling speed
 
 
-
-func _ready():
-	ball_falling_speed = 1100
-	pass 
 

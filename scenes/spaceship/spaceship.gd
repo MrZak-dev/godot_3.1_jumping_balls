@@ -5,9 +5,9 @@ const ROCK = preload("res://scenes/pixel_rocks/medium_rock.tscn")
 onready var tween = get_node("tween")
 onready var spaceship_image = get_node("image")
 onready var center_drop_position = get_node("center_drop_position")
-onready var timer = get_node("Timer")
+onready var spaceship_drop_timer = get_node("spaceship_drop_timer")
 
-onready var center_rock = ROCK.instance()
+
 
 var spaceship_leaving_position : Vector2
 func _ready():
@@ -23,15 +23,19 @@ func _ready():
 		spaceship_leaving_position = Vector2(-720 - spaceship_width ,0)#if it comes from right it complete leaving to left area
 	tween.interpolate_property(self,"position:x",get_position().x,720,2,Tween.TRANS_QUINT,Tween.EASE_OUT) #720 means the center of the screen
 	tween.start()
-	timer.start()
+	spaceship_drop_timer.start()
 
 
 
 func _on_Timer_timeout():
+	var center_rock = ROCK.instance()
 	center_rock.position = center_drop_position.global_position #set the rock position to the position2d node
-	get_parent().add_child(center_rock)# add the rock to parent node (spaceship) 
-	tween.interpolate_property(self,"position:x",get_position().x,spaceship_leaving_position.x,3,Tween.TRANS_BACK,Tween.EASE_IN_OUT)
-	tween.start()
+	if global_variables.number_of_rocks_in_scene < global_variables.total_number_of_rocks: # keep dropping rocks untill it reachs total number wanted
+		get_node("/root/main_scene/rocks/").add_child(center_rock)# add the rock to parent node (spaceship)
+		spaceship_drop_timer.start()
+	else: 
+		tween.interpolate_property(self,"position:x",get_position().x,spaceship_leaving_position.x,3,Tween.TRANS_BACK,Tween.EASE_IN_OUT)
+		tween.start()
 
 
 
