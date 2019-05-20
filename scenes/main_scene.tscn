@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/main_scene.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/bg.png" type="Texture" id=2]
 [ext_resource path="res://scenes/player/cannon/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/spaceship/spaceship.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/power_ups/speed_power_up.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 720, 1 )
@@ -19,7 +20,7 @@ extents = Vector2( 1, 1332 )
 ]]
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 333.796, 666.85, 999.565, 1332.9, 2240.0 ]
+"_edit_horizontal_guides_": [ 666.85, 999.565, 1332.9, 2240.0 ]
 }
 
 [node name="bg" type="Sprite" parent="."]
@@ -31,20 +32,9 @@ __meta__ = {
 }
 
 [node name="balls_walls" type="Node2D" parent="."]
-editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="large_wall" type="Area2D" parent="balls_walls"]
-editor/display_folded = true
-position = Vector2( 0, 333.796 )
-collision_layer = 64
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="balls_walls/large_wall"]
-position = Vector2( 720, 0 )
-shape = SubResource( 1 )
 
 [node name="medium_wall" type="Area2D" parent="balls_walls"]
 editor/display_folded = true
@@ -113,3 +103,6 @@ position = Vector2( 721.525, 2200.18 )
 [node name="spaceship" parent="." instance=ExtResource( 4 )]
 
 [node name="rocks" type="Node2D" parent="."]
+
+[node name="speed_power_up" parent="." instance=ExtResource( 5 )]
+position = Vector2( -45.4494, 843.172 )

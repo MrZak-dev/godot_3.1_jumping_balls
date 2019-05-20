@@ -9,7 +9,7 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "fire",
-"speed": 16.0
+"speed": 32.0
 } ]
 
 [node name="tween_player" type="Area2D"]
@@ -27,7 +27,7 @@ animation = "fire"
 position = Vector2( -3.56738, -165.708 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.13
+wait_time = 0.5
 autostart = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
