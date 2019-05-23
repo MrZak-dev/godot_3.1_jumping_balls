@@ -9,7 +9,7 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "fire",
-"speed": 32.0
+"speed": 5.0
 } ]
 
 [node name="tween_player" type="Area2D"]

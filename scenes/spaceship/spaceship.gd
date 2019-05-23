@@ -30,7 +30,7 @@ func _ready():
 func _on_Timer_timeout():
 	var center_rock = ROCK.instance()
 	center_rock.position = center_drop_position.global_position #set the rock position to the position2d node
-	if global_variables.number_of_rocks_in_scene < global_variables.total_number_of_rocks: # keep dropping rocks untill it reachs total number wanted
+	if global_variables.number_of_rocks_in_scene < global_variables.total_number_of_rocks and global_variables.rocks_movements: # keep dropping rocks untill it reachs total number wanted
 		get_node("/root/main_scene/rocks/").add_child(center_rock)# add the rock to parent node (spaceship)
 		spaceship_drop_timer.start()
 	else: 
