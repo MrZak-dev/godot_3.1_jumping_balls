@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/main_scene.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/bg.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/power_ups/sleep_power_up.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/power_ups/strength_power_up.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/power_ups/speed_power_up.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/power_ups/shield_power_up.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 720, 1 )
@@ -109,10 +110,13 @@ position = Vector2( 721.525, 2200.18 )
 [node name="power_ups" type="Node2D" parent="."]
 
 [node name="sleep_power_up3" parent="power_ups" instance=ExtResource( 5 )]
-position = Vector2( 308.043, 766.615 )
+position = Vector2( 395.923, 770.492 )
 
 [node name="speed_power_up" parent="power_ups" instance=ExtResource( 6 )]
-position = Vector2( 165.477, 902.399 )
+position = Vector2( 281.789, 902.399 )
 
 [node name="speed_power_up2" parent="power_ups" instance=ExtResource( 7 )]
-position = Vector2( 26.0281, 767.833 )
+position = Vector2( 152.678, 761.371 )
+
+[node name="shield_power_up" parent="power_ups" instance=ExtResource( 8 )]
+position = Vector2( 7.75409, 842.612 )

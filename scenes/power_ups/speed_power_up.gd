@@ -23,7 +23,7 @@ func _physics_process(delta):
 
 func _on_power_up_body_area_entered(area):
 	if global_variables.shooting_speed > 0.08 and global_variables.shooting_speed - 0.02 >= 0.08 :
-		global_variables.shooting_speed -= 0.02
+		global_variables.shooting_speed -= 0.4
 		area.bullet_explosion() # a bullet should explode when i hit a power up the same as hitting a rock
 	#play animation later
 	queue_free()

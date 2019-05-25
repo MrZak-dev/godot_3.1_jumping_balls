@@ -23,7 +23,7 @@ animation = "fire"
 
 [node name="Tween" type="Tween" parent="."]
 
-[node name="Position2D" type="Position2D" parent="."]
+[node name="fire_position" type="Position2D" parent="."]
 position = Vector2( -3.56738, -165.708 )
 
 [node name="Timer" type="Timer" parent="."]
