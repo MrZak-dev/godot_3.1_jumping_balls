@@ -5,6 +5,7 @@ onready var shooting_time_timer = get_node("Timer")
 onready var shooting_animation  : AnimatedSprite= get_node("AnimatedSprite")
 
 const BULLET = preload("res://scenes/player/bullet/bullet.tscn")
+const PLAYER_SHIELD = preload("res://scenes/player/cannon/player_shield.tscn")
 
 var is_player_pressing = false
 func _ready():
@@ -38,6 +39,9 @@ func _on_Timer_timeout():
 		#play fire animation
 		$AnimatedSprite.play("fire")
 
+func player_shield_activator():
+	var player_shield = PLAYER_SHIELD.instance()
+	self.add_child(player_shield)
 
 func _on_tween_player_body_entered(body):
 	print("game over")

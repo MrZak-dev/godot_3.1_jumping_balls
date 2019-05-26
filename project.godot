@@ -58,6 +58,7 @@ window/handheld/emulate_touchscreen=true
 2d_render/layer_11="bullet"
 2d_physics/layer_11="bullet"
 2d_physics/layer_12="power_up"
+2d_physics/layer_13="player_shiled"
 
 [rendering]
 

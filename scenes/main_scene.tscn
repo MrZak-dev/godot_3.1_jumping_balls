@@ -100,7 +100,7 @@ shape = SubResource( 1 )
 position = Vector2( 720, 0 )
 shape = SubResource( 1 )
 
-[node name="tween_player" parent="." instance=ExtResource( 3 )]
+[node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 721.525, 2200.18 )
 
 [node name="spaceship" parent="." instance=ExtResource( 4 )]

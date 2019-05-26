@@ -1,6 +1,6 @@
 extends Area2D
 
-const ROCK = preload("res://scenes/pixel_rocks/medium_rock.tscn")
+const ROCK = preload("res://scenes/pixel_rocks/big_rock.tscn")
 #variables that loads at script loading time
 onready var tween = get_node("tween")
 onready var spaceship_image = get_node("image")

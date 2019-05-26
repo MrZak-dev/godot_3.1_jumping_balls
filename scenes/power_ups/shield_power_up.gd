@@ -22,7 +22,9 @@ func _physics_process(delta):
 
 
 func _on_power_up_body_area_entered(area):
-	#shield code here
+	var player = get_node("/root/main_scene/player")
+	player.player_shield_activator()
+	area.bullet_explosion() # a bullet should explode when i hit a power up the same as hitting a rock
 	#play animation later
 	queue_free()
 
